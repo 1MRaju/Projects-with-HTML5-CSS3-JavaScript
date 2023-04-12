@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+#first{
+    width: 100%;
+    height: 100vh;
+    /* background-color: black; */
+    background: url('/img/header.jpg') no-repeat center center/cover;
+    overflow: hidden;
+    position: relative;
+    
+}
+.hamburgerMenu{
+    display: none;
+}
+.sliders .slide{
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider-angles{
+    width: 100%;
+    height: 20vh;
+    z-index: 3;
+    position: absolute;
+    bottom: 150px;
+    font-size: 60px;
+    font-weight: lighter;
+}
+.slider-angles .fa-chevron-right{
+    color: orange;
+    float: right;
+    margin: 20px 200px 20px 0px;
+    cursor: pointer;
+}
+.slider-angles .fa-chevron-left{
+    color: orange;
+    float: left;
+    margin: 20px 0px 20px 200px;
+    cursor: pointer;
+}
+#be{
+    font-size: 70px;
+    position: absolute;
+    top: 0;
+    left: 6%;
+    color: white;
+    text-shadow: 4px 6px 3px black;
+    z-index: 2;
+}
+
+span{
+    color: orange;
+}
+
+.navbar{
+    width: 60%;
+    height: 16vh;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    z-index: 2;
+}
+.navbar ul li{
+    display: inline-block;
+    margin: 4px 2px;
+    padding: 20px 20px 0px 0px;
+    height: 10vh;
+    width:80px;
+    font-weight: bold; 
+}
+.navbar ul li:hover{
+    background-color: orange;  
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.info{
+    width: 50%;
+    height: 65vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+.info h1{
+    font-size: 35px;
+    text-transform: uppercase;
+}
+.info h3{
+    font-size: 23px;
+    text-transform: uppercase;
+}
+.info button{
+    width: 130px;
+    height: 26px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 12px;
+}
+/* ----------------Home section ends------------------ */
+
+#About{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+}
+.leftbox{
+    width: 50%;
+    height: 80vh;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.blackline{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+.yellowline{
+    width: 50%;
+    height: 2px;
+    background-color: yellow;
+    display: inline;
+    float: right;
+}
+.rightbox{
+    width: 50%;
+    height: 80vh;
+}
+.rightbox img{
+    width: 100%;
+    height: 80vh;
+}
+.p1,.p2{
+    text-align: justify;
+}
+.p1 p{
+    font-size: 13px;
+}
+.p2 p{
+    font-size: 13px;
+}
+/* ----------------About section ends---------------- */
+
+
+#team{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: url('/img/team-bg.jpg') no-repeat center center/cover;
+    
+}
+#team h1, #team p{
+    color: white;
+    text-transform: capitalize;
+}
+.images{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.image{
+    width: 20%;
+    height: 55vh;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+.image img{
+    width: 100%;
+    height: 35vh;
+}
+.image span{
+   color: black;
+}
+.links{
+    display:block;
+}
+.links li{
+    display:inline;
+    list-style: none;
+    margin: 1px 5px;
+}
+.links li a{
+    text-decoration: none;
+    color: goldenrod;
+}
+/* ----------------Team section ends---------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width:601px) and (max-width:899px){
+    .navbar {
+        right: 3%;
+        width: 85%;
+    }
+    .navbar ul li{
+        margin: 4px -7px;
+        padding: 20px 20px 0px 0px;
+        width: 86px;
+    }
+    .slider-angles .fa-chevron-right {
+        font-size: 45px;
+        margin: 20px 58px 20px 0px;
+    }
+    .slider-angles .fa-chevron-left {
+        font-size: 45px;
+        margin: 20px 0px 20px 58px;
+    }
+
+    #About{
+        width: 100%;
+        height: 85vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .leftbox{
+        width: 100%;
+    }
+    .rightbox{
+        width: 100%;
+    }
+
+    #team{
+        position: relative;
+        top: 75vh;
+    }
+    .images{
+        /* flex-wrap: wrap; */
+        height: 80vh;
+        width: 90%;
+    }
+    .image{
+        width: 100%;
+    }
+    .image img{
+        width: 60%;
+    }
+    .image h2{
+        font-size: 16px;
+    }
+    .image span{
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width:600px){
+    .hamburgerMenu{
+        width: 20%;
+        height: 42vh;
+        display: block;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        z-index: 7;  
+    }
+    .hamburgerMenu i{
+        color: white;
+        font-size: 22px;
+        float: right;
+        margin: 5px;
+    }
+    .hamburgerMenu .menu{
+        list-style: none;
+        position: absolute;
+        top: 35px;
+        right: 0px;
+        text-align: right;
+        padding: 20px;
+    }
+    .hamburgerMenu .menu li{
+        line-height: 33px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .hamburgerMenu .menu li:hover{
+      background-color: orange;
+    }
+    .hamburgerMenu .menu li a{
+        color: white;
+        text-decoration: none;
+    }
+    #be{
+        font-size: 53px;
+    }
+   .navbar ul li{
+        display: none;
+    }
+    .info h1{
+        font-size: 23px;
+    }
+    .info h3{
+        font-size: 20px;
+    }
+    .info p{
+        font-size: 13px;
+    }
+    .info button{
+        font-size: 11px;
+        width: 81px;
+        height: 21px;
+    }
+    #About{
+        width: 100%;
+        height: 85vh;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .leftbox{
+        width: 100%;
+    }
+    .rightbox{
+        width: 100%;
+    }
+    .slider-angles .fa-chevron-right {
+        margin: 14px 40px 20px 0px;
+           font-size: 35px;
+    }
+    .slider-angles .fa-chevron-left {
+        margin: 14px 0px 20px 40px;
+           font-size: 35px;
+    }
+    .rightbox{
+        height: 57vh;
+    }
+   .rightbox img {
+       width: 100%;
+       height: 55vh;
+    }
+    .p1 p, .p2 p{
+        font-size: 9px;
+    }
+
+    #team{
+        height: 218vh;
+        position: relative;
+        justify-content: flex-start;
+        top: 49vh;
+        background: url('/img/team-bg.jpg') no-repeat center center/cover;
+    }
+    #team p{
+        font-size: 13px;
+    }
+    .images{
+        flex-wrap: wrap;
+        height: 80vh;
+        width: 90%;
+        max-width: 400px;
+    }
+    .image {
+        width: 100%;
+        height: 48vh;
+    }
+    .image img{
+        width: 60%;
+    }
+    .image h2{
+        font-size: 16px;
+    }
+    .image span{
+        font-size: 12px;
+    }
+}

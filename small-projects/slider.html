@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        .slideshow{
+            width: 90%;
+            height: 100vh;
+            margin: auto;
+        }
+        #sliderimage{
+            width: 100%;
+            height: 100vh;
+        }
+        
+    </style>
+    <script>
+        var image=['/images/pexels-eberhard-grossgasteiger-572897.jpg','/images/pexels-liis-saar-832521.jpg', '/images/pexels-pixabay-327394.jpg' ]
+        var i = 0;
+        function slides(){
+            document.getElementById('sliderimage').src=image[i]
+            if(i<(image.length-1)){
+                i++
+            }
+            else{
+                i=0;
+            }
+        }
+        setInterval(slides,2000);
+    </script>
+</head>
+<body>
+     <div class="slideshow">
+        <img src="/images/pexels-sindre-fs-1144176.jpg" id="sliderimage">
+     </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marque Tool</Marquee></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+        #container{
+            width: 40%;
+            height: 40vh;
+            margin: 1em auto;
+            overflow: hidden;
+            background: rgb(63, 59, 59);
+            box-sizing: border-box;
+            position: relative;
+            color: white;
+        }
+        .marquee{
+            top: 6em;
+            position: relative;
+            box-sizing: border-box;
+            animation: marquee 10s linear infinite;
+        }
+        .marquee a{
+            color: orange;
+        }
+       .marquee:hover{
+        animation-play-state: paused;
+       }
+      
+       @keyframes marquee{
+        0%{top:8em}
+        100%{top: -11em}
+       }
+
+       .micro .marquee{
+        margin: 0;
+        padding: 0 1em;
+        line-height: 1.5em;
+        font: 4em;
+       }
+       .micro::before,.micro::after{
+        left: 0;
+        z-index: 1;
+        content: '';
+        position: absolute;
+        /* pointer-events: none; */
+        width: 100%;
+        background-color: red;
+        height: 3em;
+       }
+       .micro::after{
+        /* content: '';
+        position: absolute; */
+        bottom: 0;
+        transform: rotate(180deg);
+       }
+       .micro::before{
+        top: 0;
+       }
+       .vanity{
+        color: rgba(62, 60, 60, 0.945);
+        text-align: center;
+        font-size: 0.85rem;
+        font-family: 'poppins';
+       }
+       .vanity a, .micro a{
+          color: blueviolet;
+          transition: color 0.5s;
+       }
+       .vanity a:hover, .micro a:hover{
+        color: red;
+       }
+       #toggle{
+        width: 10%;
+        height: 4vh;
+        font-size: 1rem;
+        display: block;
+        margin: 2em auto;
+        background-color: black;
+        color: white;
+       }
+    </style>
+</head>
+<body>
+    <div class="micro" id="container">
+
+        <p class="marquee">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ullam, impedit consequuntur <a href="https://www.sevenmentor.com/full-stack-training-institute-in-pune.php">Form More information </a>soluta ducimus necessitatibus. Porro fugit eum maiores rem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, excepturi.
+        <a href="https://www.sevenmentor.com/">SevenMentor </a>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quis nesciunt repellendus adipisci, culpa non?</p>
+
+    </div>
+
+    <button id="toggle">Toggle</button>
+
+    <p class="vanity">
+        <a href="https://www.sevenmentor.com/">@sevenmentor.com</a>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident delectus quo officiis, inventore quibusdam sed.
+    </p>
+
+</body>
+
+<script>
+    document.getElementById("toggle").addEventListener('click', function(){
+            // document.getElementById("container").style.background='blue'
+            // document.getElementById("container").style.width='100%'
+            document.getElementById("container").classList.toggle("micro")
+
+    })
+</script>
+</html>

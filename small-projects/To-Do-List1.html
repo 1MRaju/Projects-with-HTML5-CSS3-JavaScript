@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="bg-success text-white p-5">
+      <div class="container">
+        <div class="row">
+          <strong class="text-danger fs-5">To-do List</strong>
+        </div>
+      </div>
+    </header>
+    <div class="conatiner mt-3">
+      <h1>Add Items</h1>
+
+      <label id="lblsuccess" style="display: none"></label>
+
+      <form id="addForm">
+        <div class="row">
+          <div class="col-lg-7 col-md-7 col-sm-7">
+            <input
+              type="text"
+              onkeyup="toggleButton(this,'submit')"
+              class="form-control"
+              id="item"
+            />
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-md-5 col-sm-5 mt-5">
+          <input
+            type="submit"
+            class="btn btn-primary"
+            id="submit"
+            value="Submit"
+          />
+        </div>
+      </form>
+
+      <h3 class="mt-4">Tasks</h3>
+
+      <form id="addForm">
+        <ul id="items" class="list-group"></ul>
+      </form>
+    </div>
+
+    <script>
+      window.onload = () => {
+        var form1 = document.querySelector("#addForm");
+
+        let items = document.getElementById("items");
+
+        let submit = document.getElementById("submit");
+
+        let editItem = null;
+
+        form1.addEventListener("submit", addItem);
+        items.addEventListener("click", removeItem);
+      };
+
+      function addItem(e) {
+        e.preventDefault();
+
+        if (submit.value != "Submit") {
+          console.log("Hello");
+          editItem.target.parentNode.childNodes[0].data =
+            document.getElementById("item").value;
+
+          submit.value = "Submit";
+          document.getElementById("item").value = "";
+
+          document.getElementById("lblsuccess").style.display = "block";
+
+          document.getElementById("lblsuccess").innerHTML =
+            "Text edited successfully!..";
+        }
+        let newItem = document.getElementById("item").value;
+        if (newItem.trim() == "" || newItem.trim() == null) return false;
+        else document.getElementById("item").value = "";
+
+        let li = document.createElement("li");
+        li.className = "list-group-item";
+
+        let deleteButton = document.createElement("button");
+        deleteButton.className =
+          "btn btn-danger  text-white float-right delete";
+
+        deleteButton.appendChild(document.createTextNode("Delete"));
+
+        let editButton = document.createElement("button");
+
+        editButton.className = "btn btn-info float-right edit";
+
+        editButton.appendChild(document.createTextNode("Edit"));
+
+        li.appendChild(document.createTextNode(newItem));
+        li.appendChild(deleteButton);
+        li.appendChild(editButton);
+
+        items.appendChild(li);
+      }
+
+      function removeItem(e) {
+        e.preventDefault();
+        if (e.target.classList.contains("delete")) {
+          if (confirm("Are You sure?")) {
+            let li = e.target.parentNode;
+            items.removeChild(li);
+            document.getElementById("lblsuccess").innerHTML =
+              "Text deleted successfully";
+            document.getElementById("lblsuccess").style.display = "block";
+
+            setTimeout(function () {
+              document.getElementById("lblsuccess").style.display = "none";
+            }, 3000);
+          }
+        }
+        if (e.target.classList.contains("edit")) {
+          document.getElementById("item").value =
+            e.target.parentNode.childNodes[0].data;
+          submit.value = "Edit";
+          editItem = e;
+        }
+      }
+      function toggleButton(ref, btnID) {
+        document.getElementById(btnID).disabled = false;
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
