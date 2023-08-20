@@ -102,6 +102,12 @@ span{
     text-align: center;
     color: white;
     z-index: 2;
+} 
+.info:hover{
+    box-shadow:0.51px 0.5px 8px white,
+    -0.5px -0.5px 8px white,
+    0.51px 0.5px 8px white,
+    0.5px -0.5px 8px white;
 }
 .info h1{
     font-size: 35px;
@@ -112,13 +118,20 @@ span{
     text-transform: uppercase;
 }
 .info button{
-    width: 130px;
-    height: 26px;
+    width: 150px;
+    height: 29px;
     font-weight: bold;
     color: white;
     background-color: transparent;
     border: 1px solid white;
     font-size: 12px;
+    letter-spacing: 2px;
+}
+.info button:hover{
+    box-shadow: 2px 3px 4px white,
+                -2px -3px 4px white;
+    cursor: pointer;
+    /* text-shadow: 2px 3px 2px white; */
 }
 /* ----------------Home section ends------------------ */
 
@@ -197,6 +210,12 @@ span{
     flex-direction: column;
     align-items: center;
     background-color: white;
+    transition: 1.3s;
+    cursor: pointer;
+}
+.image:hover{
+    transform: scale(1.3);
+    /* transform: rotate(deg); */
 }
 .image img{
     width: 100%;
@@ -205,6 +224,7 @@ span{
 .image span{
    color: black;
 }
+
 .links{
     display:block;
 }
@@ -217,18 +237,375 @@ span{
     text-decoration: none;
     color: goldenrod;
 }
+
 /* ----------------Team section ends---------------- */
 
+.services1{
+    display: flex;
+}
+.servicesImg{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    background: url('/img/services-bg.jpg') no-repeat center center/cover;
+    /* filter: opacity(0.9); */
+}
+.list{
+    width: 18%;
+    height: 50vh;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    transition: 1s;
+    background: white;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.list:hover{
+   transform: scale(1.1);
+}
+.list:hover i{
+    transform: rotate(720deg);
+}
+.green{
+    width: 100%;
+    height: 16vh;
+    background-color: rgb(15, 232, 15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 2px 3px 2px black;
+    font-size: 16px;
+}
+.green h4{
+    z-index: 2;
+}
+.bottom{
+    width: 100%;
+    height: 16vh;
+    background-color: rgb(15, 232, 15);
+    color: white;
+    font-weight: 800;
+    padding-top: 7vh;
+    font-size: 32px;
+    text-shadow: 2px 3px 2px black;
+}
+.white{
+    width: 110%;
+    height: 10vh;
+    background-color: white;
+    position: absolute;
+    top: 31vh;
+    left: -1vw;
+    z-index: 2;
+    transform: rotate(-6deg);
+}
+.transparent{
+    width: 110%;
+    height: 11vh;
+    background-color: rgba(65, 61, 61, 0.347);
+    position: absolute;
+    top: -2vh;
+    left: -1vw;
+    z-index: 1;
+    transform: rotate(-6deg);
+}
+.para{
+    z-index: 4;
+    font-size: 13px;
+    word-spacing: 2px;
+    line-height: 22px;
+}
+.list i {
+    font-size: 25px;
+    position: absolute;
+    top: 2px;
+    left: 40%;
+    right: 40%;
+    color: white;
+    text-shadow: 2px 3px 2px black;
+    margin-bottom: 10px;
+    transition: 1s;
+    z-index: 2;
+}
+
+/* facts */
+.serviceFacts{
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.serviceFacts h2{
+    color: white;
+    text-transform: capitalize;
+}
+.factsList{
+    height: 25vh;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+.list1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    transition: 1s;
+    font-weight: bold;
+}
+.list1:hover i{
+    font-size: 40px;
+    color: bisque;
+    transition: 1s;
+}
+.list1:hover{
+    background-color:rgba(49, 46, 46, 0.475);
+    box-shadow: 1px 1px 1.4px black,
+    1px 1px 1.4px rgb(114, 110, 110),
+    1px 1px 1.4px white,
+    -1px -1px 1.4px black,
+    -1px -1px 1.4px rgb(114, 110, 110),
+    -1px -1px 1.4px white;
+    transform: scale(1.3);
+}
+.factsList i{
+    color: white;
+}
+#number1,#number2,#number3,#number4,#number5,#number6{
+    color: white;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+/* ----------------Services section ends---------------- */
 
 
+#gallery{
+   width: 100%; 
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+}
+.galleryList{
+    width: 50%;
+    height: 4vh;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4vh;
+    font-weight: bold;
+}
+.galleryList div{
+    cursor: pointer;
+}
+.galleryList div:hover{
+    color: goldenrod;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 2px solid goldenrod;
+}
+#gallery h1{
+    margin-top: 3vh;
+}
+.webdesign, .ecommerce, .cms, .logo{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin-top: 10vh;
+}
+.webdesign img, .ecommerce img,.cms img,.logo img{
+    width: 22%;
+    height: 45vh;
+    transition: 1s;
+    cursor: pointer;
+}
+.webdesign img:hover, .ecommerce img:hover,.cms img:hover,.logo img:hover{
+    transform: scale(1.1);
+    border-radius: 50%;
+}
+/* ----------------gallery section ends---------------- */
 
+#blog{
+    width: 100%;
+    height: 100vh;
+    background-color: goldenrod;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.blogHead{
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(40, 43, 45);
+}
+.yellowBar{
+   width: 60%;
+   height: 40vh;
+   background-color: goldenrod;
+   float: right;
+   transform: rotate(-15deg);
+   position: relative;
+   right: -60px;
+   top: 40px;
+}
+.blogList{
+    width: 80%;
+    height:80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blogItem{
+    height:70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+   
+}
+.blogItem img:hover{
+    /* transform: rotate(720deg); */
+    transform: scale(1.3);
+}
+.blogItem img{
+    width: 70%;
+    height: 38vh;
+    transition: 2s;
+}
+.date{
+    color: rgb(40, 43, 45);
+    font-size: 30px;
+}
+.blogItem button{
+    width: 80px;
+    height: 25px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.blogItem button:hover{
+    box-shadow: 2px 3px 5px white,
+    2px 3px 5px white,
+    -2px -3px 5px white,
+    -2px -0dvb 5px white;
+    background-color: rgba(255, 255, 255, 0.466);
+    font-weight: bold;
+    color: rgb(75, 74, 74);
+}
+/* ----------------blog section ends---------------- */
 
+#contact{
+    width: 100%;
+    height: 70vh;
+    background: url('/img/contact-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.contactHeading{
+    width: 80%;
+    height:20vh;
+    display: block;
+    margin: 1vh auto;
+}
+.contactHeading p{
+    margin-top: 4vh;
+}
+.inputs{
+    width: 80%;
+    height: 10vh;
+    /* border: 1px solid red; */
+    text-align: center;
+    display: block;
+    margin: 2vh auto;
+}
+.inputs input{
+    width: 43%;
+    height: 6vh;
+}
+textarea{
+    width: 70%;
+    height: 18vh;
+}
+#contact button{
+    display: block;
+    margin: 2vh auto;
+    width: 150px;
+    height: 30px;
+    background-color: goldenrod;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    box-shadow: 1px 2px 3px white,
+                -1px -2px 3px white;
+                cursor: pointer;
+}
 
+/* ----------------contact section ends---------------- */
 
-
-
-
-
+footer{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left{
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('/img/footer-bg.jpg') no-repeat center center/cover;
+}
+footer .links li a i{
+    color: white;
+    font-size: 18px;
+    padding:5px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.right{
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: goldenrod;
+}
+.right span{
+    color: white;
+}
 
 
 
@@ -287,7 +664,90 @@ span{
     .image span{
         font-size: 12px;
     }
+
+    .services1{
+        position: relative;
+        top: 76vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .servicesImg{
+        position: relative;
+        top: 76vh;
+        height: 120vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .list{
+        width: 35%;
+    }
+    .bottom{
+        font-size: 27px;
+        padding-top: 7vh;
+    }
+
+    .serviceFacts{
+        width: 100%;
+        height: 110vh;
+        position: relative;
+        top: 76vh;
+    }
+    .serviceFacts h2{
+        font-size: 20px;
+    }
+    .factsList{
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 14px;
+    }
+    .list1{
+        width: 28%;
+        height: 30vh;
+    }
+    #gallery{
+        position: relative;
+        top: 80vh;
+    }
+    .galleryList{
+        font-size: 15px;
+    }
+
+    #blog{
+        position: relative;
+        top: 80vh;
+    }
+    .blogItem p{
+        font-size: 14px;
+    }
+    .blogItem button{
+        width: 70px;
+        height: 22px;
+        font-size: 12px;
+    }
+    .blogItem img{
+        width: 80%;
+        height: 30vh;
+    }
+
+    #contact{
+        position: relative;
+        top: 80vh;
+    }
+    #contact button{
+        width: 120px;
+        height: 22px;
+        font-size: 13px;
+    }
+
+    footer{
+        position: relative;
+        top: 80vh;
+    }
 }
+
 
 
 @media (max-width:600px){
@@ -407,4 +867,159 @@ span{
     .image span{
         font-size: 12px;
     }
+    .services1{
+        width: 100%;
+        height: 85vh;
+        top: 50vh;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .servicesImg{
+        position: relative;
+        top: 106vh;
+        height: 240vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .list{
+        width: 80%;
+    }
+    .para{
+        font-size: 9px;
+    }
+    .white{
+        top: 28.5vh;
+    }
+    .bottom{
+        font-size: 27px;
+        padding-top: 7vh;
+    }
+
+    .serviceFacts{
+        width: 100%;
+        height: 140vh;
+        position: relative;
+        top: 106vh;
+        text-align: center;
+    }
+    .serviceFacts h2{
+        font-size: 16px;
+    }
+    .factsList{
+        width: 100%;
+        height: 120vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
+    .list1{
+        width: 70%;
+        height: 20vh;
+    }
+
+    #gallery{
+        height: 115vh;
+        position: relative;
+        top: 105vh;
+        text-align: center;
+    }
+    #gallery p{
+        font-size: 11px;
+    }
+    .galleryList{
+        text-align: center;
+        width: 36%;
+        max-width: 120px;
+        height: 21vh;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 13px;
+    }
+    .galleryList div:hover{
+        letter-spacing: 2px;
+    }
+    .webdesign, .ecommerce, .cms, .logo{
+        height: 45vh;
+       flex-direction: row;
+       justify-content: space-between;
+       flex-wrap: wrap;
+    }
+    .webdesign img, .ecommerce img, .cms img, .logo img{
+       width: 40%;
+       max-width: 320px;
+       height: 31vh;
+    }
+
+    #blog{
+        height: 200vh;
+        position: relative;
+        top: 110vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #blog p{
+        font-size: 11px;
+    }
+    .blogList{
+        height: 130vh;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .blogItem{
+        margin-top: 30px;
+    }
+    .blogItem p{
+        font-size: 11px;
+    }
+    .blogItem button{
+        width: 60px;
+        height: 19px;
+        font-size: 10px;
+    }
+    .blogItem img{
+        width: 70%;
+        height: 30vh;
+    }
+
+    #contact{
+        height: 70vh;
+        position: relative;
+        top: 110vh;
+    }
+    .inputs{
+        height: 15vh;
+    }
+    .inputs input{
+        width: 87%;
+        margin: 4px;
+    }
+    .contactHeading p{
+        font-size: 11px;
+    }
+    #contact button{
+        width: 100px;
+        height: 20px;
+        font-size: 12px;
+    }
+
+    footer{
+        height: 50vh;
+        position: relative;
+        top: 110vh;
+        flex-wrap: wrap;
+    }
+    .left{
+        width: 100%;
+        font-size: 12px;
+    }
+    .right{
+        width: 100%;
+        font-size: 12px;
+    }
+  
 }
